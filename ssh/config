@@ -1,0 +1,15 @@
+Host *
+   AddKeysToAgent yes
+   UseKeychain yes
+   IdentityFile ~/.ssh/id_ecdsa
+   ChallengeResponseAuthentication no
+#   PasswordAuthentication no
+
+
+Host adrian-pi.local
+   HostName adrian-pi.local
+   User pi
+
+Host adrian-pi-zero.local
+   HostName adrian-pi-zero.local
+   User pi
