@@ -1,0 +1,13 @@
+code --install-extension DavidAnson.vscode-markdownlint
+code --install-extension himanoa.Python-autopep8
+code --install-extension James-Yu.latex-workshop
+code --install-extension ms-python.python
+code --install-extension ms-vscode-remote.remote-ssh
+code --install-extension ms-vscode-remote.remote-ssh-edit
+code --install-extension njpwerner.autodocstring
+code --install-extension ritwickdey.LiveServer
+code --install-extension Rubymaniac.vscode-direnv
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension streetsidesoftware.code-spell-checker-french
+code --install-extension VisualStudioExptTeam.vscodeintellicode
+code --install-extension vscode-icons-team.vscode-icons

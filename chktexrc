@@ -1,0 +1,65 @@
+Silent
+{
+  \rm \em \bf \it \sl \sf \sc \tt \selectfont
+    \rmfamily \sffamily \ttfamily \mdseries \bfseries
+    \slshape \scshape \relax
+    \vskip \pagebreak \nopagebreak
+
+    \textrm \textem \textbf \textit \textsl \textsf \textsc \texttt
+
+    \clearpage \ddots \dotfill \flushbottom \fussy \indent \linebreak
+    \onecolumn \pagebreak \pushtabs \poptabs \scriptsize \sloppy
+    \twocolumn \vdots
+    \today \kill \newline \thicklines \thinlines
+
+    \columnsep \space \item \tiny \footnotesize \small \normalsize
+    \normal \large \Large \LARGE \huge \Huge \printindex
+
+    \newpage \listoffigures \listoftables \tableofcontents
+    \maketitle \makeindex
+
+    \hline \hrule \vrule
+
+    \centering
+
+    \bigskip \medskip \smallskip
+
+    \left\{ \right\}
+
+    \noindent \expandafter
+
+    \makeatletter \makeatother
+
+    \columnseprule
+
+    \textwidth \textheight \hsize \vsize
+
+    \if \fi \else
+
+    \csname \endcsname
+
+    \z@ \p@ \@warning \typeout
+
+    \dots \ldots \input \endinput \nextline \leavevmode \cdots
+    \appendix \listfiles \and \quad
+    \hskip \vfill \vfil \hfill \hfil \topmargin \oddsidemargin
+    \frenchspacing \nonfrenchspacing
+    \begingroup \endgroup \par
+
+    \vrefwarning \upshape \headheight \headsep \hoffset \voffset
+    \cdot \qquad
+    \left \right
+    \qedhere
+
+    \xspace
+
+    \addlinespace \cr \fill \frontmatter
+    \toprule \midrule \bottomrule
+
+}[
+# Here you can put regular expressions to match Silent macros.  It was
+# designed for  the case where you  have many custom macros  sharing a
+# common prefix, but can of course be used for other things.
+
+# \\my.*
+]

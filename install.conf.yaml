@@ -1,11 +1,65 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+    shell:
+      stderr: true
+      quiet: false
+
 - clean: ['~']
 
+- shell:
+#   - [sh pre-install.sh, Running pre installation script]
+ - [mkdir -p ~/.config/direnv, Creating direnv folder]
+
 - link:
+    # Terminal:
+    ~/.p10k.zsh:
+        force: true
+        path: p10k.zsh
+    ~/.ssh/config: ssh/config
+    ~/.zshrc:
+        force: true
+        path: zshrc
     ~/.bash_profile: bash_profile
+    ~/.config/direnv/direnvrc:
+        force: true
+        path: direnvrc
+
+    # Git
     ~/.gitconfig: gitconfig
-    ~/.ssh/config:
-        path: ssh/config
+    ~/.gitmessage: gitmessage
+    ~/.gitignore_global: gitignore_global
+    ~/.gitconfig_local: gitconfig_local
+
+    # LaTeX
+    ~/.chktexrc: chktexrc
+
+# Installing dependencies:
+- brewfile:
+   file: Brewfile
+   no-upgrage: true
+
+# Setting up vscode:
+- link:
+    # vscode:
+    "~/Library/Application Support/Code/User/settings.json":
+        path: vscode/settings.json
         create: true
-    ~/.zshrc: zshrc
+    "~/Library/Application Support/Code/User/keybindings.json":
+        path: vscode/keybindings.json
+        create: true
+    "~/Library/Application Support/Code/User/snippets":
+        path: vscode/snippets
+        create: true
 
+- shell:
+ - [bash ./vscode/install.sh, Installing vscode extensions]
 
+# Cleaning up:
+- shell:
+  - [brew cleanup, Cleaning up]
+
+- shell:
+#   - [sh fonts/install.sh, Installing Powerline fonts]
+  - [git submodule update --init --recursive, Installing submodules]
