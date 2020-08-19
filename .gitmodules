@@ -7,18 +7,12 @@
 [submodule "dotbot-brewfile"]
 	path = dotbot-brewfile
 	url = https://github.com/sobolevn/dotbot-brewfile.git
-[submodule "shell/zsh/custom/plugins/autoupdate"]
-	path = shell/zsh/custom/plugins/autoupdate
+[submodule "shell/zsh-plugins/autoupdate"]
+	path = shell/zsh-plugins/autoupdate
 	url = https://github.com/TamCore/autoupdate-oh-my-zsh-plugins
-[submodule "shell/zsh/custom/plugins/zsh-autosuggestions"]
-	path = shell/zsh/custom/plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "shell/zsh/custom/themes/powerlevel10k"]
-	path = shell/zsh/custom/themes/powerlevel10k
-	url = https://github.com/romkatv/powerlevel10k.git
-[submodule "shell/oh-my-zsh/custom/plugins/autoupdate"]
-	path = shell/oh-my-zsh/custom/plugins/autoupdate
-	url = https://github.com/TamCore/autoupdate-oh-my-zsh-plugins
-[submodule "shell/oh-my-zsh/custom/plugins/zsh-completions"]
-	path = shell/oh-my-zsh/custom/plugins/zsh-completions
+[submodule "shell/zsh-plugins/zsh-completions"]
+	path = shell/zsh-plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
+[submodule "shell/zsh-themes/powerlevel10k"]
+	path = shell/zsh-themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
