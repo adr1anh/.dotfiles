@@ -1,65 +1,70 @@
 - defaults:
     link:
-      create: true
-      relink: true
+        create: true
+        relink: true
     shell:
-      stderr: true
-      quiet: false
+        stderr: true
+        quiet: false
 
-- clean: ['~']
+- clean: ['~', '~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins/']
 
-- shell:
-#   - [sh pre-install.sh, Running pre installation script]
- - [mkdir -p ~/.config/direnv, Creating direnv folder]
+# - shell:
+#     - [sh pre-install.sh, Running pre installation script]
 
 - link:
     # Terminal:
-    ~/.p10k.zsh:
-        force: true
-        path: p10k.zsh
     ~/.ssh/config: ssh/config
+    ~/.p10k.zsh: shell/p10k.zsh
+
+
+    ~/.oh-my-zsh/custom/plugins/autoupdate: shell/zsh-plugins/autoupdate/
+    # ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: shell/zsh-plugins/zsh-autosuggestions/
+    ~/.oh-my-zsh/custom/themes/powerlevel10k: shell/zsh-themes/powerlevel10k/
+    ~/.oh-my-zsh/custom/plugins/zsh-completions: shell/zsh-plugins/zsh-completions/
+    # ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: oh-my-zsh/custom/plugins/zsh-syntax-highlighting/
+
     ~/.zshrc:
         force: true
-        path: zshrc
-    ~/.bash_profile: bash_profile
-    ~/.config/direnv/direnvrc:
-        force: true
-        path: direnvrc
+        path: shell/zshrc
+    ~/.config/direnv/direnvrc: direnv/direnvrc
 
     # Git
-    ~/.gitconfig: gitconfig
-    ~/.gitmessage: gitmessage
-    ~/.gitignore_global: gitignore_global
-    ~/.gitconfig_local: gitconfig_local
+    ~/.gitconfig: git/gitconfig
+    ~/.gitmessage: git/gitmessage
+    ~/.gitignore_global: git/gitignore_global
+    ~/.gitconfig_local: git/gitconfig_local
 
     # LaTeX
-    ~/.chktexrc: chktexrc
+    ~/.chktexrc: latex/chktexrc
+    ~/.indentconfig.yaml: latex/indentconfig.yaml
 
-# Installing dependencies:
-- brewfile:
-   file: Brewfile
-   no-upgrage: true
+    # Python
+    ~/.condarc: python/condarc
 
-# Setting up vscode:
-- link:
-    # vscode:
-    "~/Library/Application Support/Code/User/settings.json":
-        path: vscode/settings.json
-        create: true
-    "~/Library/Application Support/Code/User/keybindings.json":
-        path: vscode/keybindings.json
-        create: true
-    "~/Library/Application Support/Code/User/snippets":
-        path: vscode/snippets
-        create: true
+# # Installing dependencies:
+# - brewfile:
+#    file: brew/Brewfile
 
-- shell:
- - [bash ./vscode/install.sh, Installing vscode extensions]
+# # Setting up vscode:
+# - link:
+#     # vscode:
+#     "~/Library/Application Support/Code/User/settings.json":
+#         path: vscode/settings.json
+#         create: true
+#     "~/Library/Application Support/Code/User/keybindings.json":
+#         path: vscode/keybindings.json
+#         create: true
+#     "~/Library/Application Support/Code/User/snippets":
+#         path: vscode/snippets
+#         create: true
 
-# Cleaning up:
-- shell:
-  - [brew cleanup, Cleaning up]
+# - shell:
+#  - [bash ./vscode/install.sh, Installing vscode extensions]
 
-- shell:
+# # Cleaning up:
+# - shell:
+#   - [brew cleanup, Cleaning up]
+
+# - shell:
 #   - [sh fonts/install.sh, Installing Powerline fonts]
-  - [git submodule update --init --recursive, Installing submodules]
+#   - [git submodule update --init --recursive, Installing submodules]

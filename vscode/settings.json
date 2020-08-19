@@ -13,7 +13,6 @@
         "*.log": true,
         "*.run.xml": true,
         "*.synctex.gz": true,
-        "**/.direnv": true,
         "**/.idea": true,
         "**/.ipynb_checkpoints": true,
         "**/*.aux": true,
@@ -36,7 +35,6 @@
         "--generate-members=torch.*"
     ],
     "files.autoSave": "onFocusChange",
-    "autoDocstring.docstringFormat": "numpy",
     "python.formatting.provider": "yapf",
     "python.formatting.yapfArgs": [
         "--style",
@@ -97,12 +95,17 @@
         "Vélu",
         "Zariski",
         "abelian",
+        "asyncio",
         "combi",
+        "getenv",
         "holonomic",
         "injective",
+        "inplace",
         "isogenies",
         "isogeny",
+        "issubset",
         "itertools",
+        "klines",
         "lasec",
         "lu",
         "monic",
@@ -128,10 +131,13 @@
         "-y=defaultIndent: '%INDENT%'",
         "-l=/Users/Adrian/.indentconfig.yaml"
     ],
-    "python.pythonPath": "/usr/local/anaconda3/bin/python",
+    "python.pythonPath": "/Users/adrian/.pyenv/versions/3.8.3/bin/python",
     "editor.minimap.enabled": false,
-    "python.languageServer": "Microsoft",
+    "python.languageServer": "Pylance",
     "files.associations": {
         "direnvrc": "shellscript"
-    }
+    },
+    "git.autofetch": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false
 }

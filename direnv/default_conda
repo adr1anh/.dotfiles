@@ -1,0 +1,4 @@
+# -*- mode: sh; -*-
+# (rootdir)/.envrc : local direnv configuration file
+
+layout anaconda

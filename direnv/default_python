@@ -1,0 +1,12 @@
+# -*- mode: sh; -*-
+# (rootdir)/.envrc : local direnv configuration file
+
+# Default python version and virtualenv (basename of the root project directory)
+[ -f ".python-version" ]    && pyversion=$(head .python-version) || pyversion=3.8.3
+[ -f ".python-virtualenv" ] && pvenv=$(head .python-virtualenv)  || pvenv=$(basename $PWD)
+
+use python ${pyversion}
+# Create the virtualenv if not yet done
+layout virtualenv ${pyversion} ${pvenv}
+# activate it
+layout activate ${pvenv}

@@ -1,15 +1,22 @@
 Host *
    AddKeysToAgent yes
    UseKeychain yes
-   IdentityFile ~/.ssh/id_ecdsa
+   IdentityFile ~/.ssh/id_ed25519
    ChallengeResponseAuthentication no
-#   PasswordAuthentication no
 
-
-Host adrian-pi.local
+Host pi
    HostName adrian-pi.local
    User pi
 
-Host adrian-pi-zero.local
+Host pi-zero
    HostName adrian-pi-zero.local
+   User pi
+
+Host 46.101.131.69
+   HostName 46.101.131.69
+   User root
+   ForwardAgent yes
+
+Host pigy
+   HostName pigy.local
    User pi
